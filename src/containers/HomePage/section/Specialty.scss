@@ -1,0 +1,149 @@
+.section-specialty {
+    height: 500px;
+    // border: 1px solid grey;
+
+    .specialty-content {
+        width: 1208px;
+        margin: 0 auto;
+
+        .specialty-content-header {
+            margin: 32px 0;
+            margin-right: 19px;
+
+
+            .title-section {
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            .btn-section {
+                float: right;
+                outline: none;
+                background-color: rgb(218, 243, 246); // Màu vàng
+                color: rgb(52, 146, 158); // Chữ trắng
+                padding: 10px 20px;
+                border: none; // Loại bỏ đường viền
+                border-radius: 16px;
+                cursor: pointer;
+                font-size: 20px;
+                font-weight: 600;
+                transition: background-color 0.3s, color 0.3s; // Hiệu ứng mượt mà khi hover
+
+                &:hover {
+                    background-color: rgb(188, 233, 238); // Màu nền khi hover
+                    color: rgb(52, 146, 158); // Màu chữ khi hover
+                }
+            }
+        }
+
+        .img-customize {
+            height: 300px;
+            border-color: rgb(241, 241, 241);
+            border-radius: 16px;
+            border: 1px solid rgb(241, 241, 241);
+            overflow: hidden;
+
+            .img {
+                height: 80%;
+                width: 100%;
+                background: url(../../../assets/images/specialty/101627-co-xuong-khop.png);
+                background-size: contain;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .title-img {
+                height: 20%;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+
+.slick-prev {
+
+    box-shadow: rgb(201, 236, 240) 2px 2px 5px;
+
+    // position: relative !important;
+    width: 40px;
+    /* Adjust the width as needed */
+    height: 40px;
+    /* Adjust the height as needed */
+    background-color: #c4eaf3 !important;
+    border-radius: 8px !important;
+    border-width: 1px !important;
+    border-color: rgb(181, 231, 237) !important;
+    /* Add a border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    z-index: 1000 !important;
+    cursor: pointer;
+    /* Transition effect for background color */
+
+    &:hover {
+        background-color: #c4eaf3 !important;
+    }
+}
+
+.slick-next {
+
+    box-shadow: rgb(201, 236, 240) 2px 2px 5px;
+
+    // position: relative !important;
+    width: 40px;
+    /* Adjust the width as needed */
+    height: 40px;
+    /* Adjust the height as needed */
+    border-radius: 8px !important;
+    border-width: 1px !important;
+    border-color: rgb(181, 231, 237) !important;
+    background-color: #c4eaf3 !important;
+    /* Add a border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    z-index: 1000 !important;
+    cursor: pointer;
+    /* Transition effect for background color */
+
+    &:hover {
+        background-color: #c4eaf3 !important;
+    }
+}
+
+.slick-slide {
+    padding-right: 20px;
+    /* Tạo khoảng cách giữa các slide */
+}
+
+
+
+
+
+.slick-prev {
+    left: -19px;
+    /* Position the prev button */
+}
+
+.slick-next {
+    right: 1px;
+    // z-index: 10001 !important;
+    /* Position the next button */
+}
+
+/* Style the icon inside the arrows */
+// .slick-prev .fa-chevron-left,
+// .slick-next .fa-chevron-right {
+//     color: #dd3333 !important;
+//     /* Change the icon color */
+// }
