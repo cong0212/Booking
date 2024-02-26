@@ -134,6 +134,12 @@ class Doctor extends Component {
             date: formatedDate
         })
 
+        if (res && res.errCode === 0) {
+            toast.success('save schedule succcess!')
+        } else {
+            toast.error('save fail schedule')
+        }
+
         console.log('save bulk check: ', res)
 
         console.log('check selectedtime state: ', result)
@@ -146,6 +152,8 @@ class Doctor extends Component {
     render() {
         console.log('scheduletime check state: ', this.state.rangeTime)
         let { rangeTime } = this.state
+
+        let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
         return (
             <div className='manage-schedule-container'>
                 <div className='m-s-title'>
@@ -169,7 +177,7 @@ class Doctor extends Component {
                                 onChange={this.handleOnchangeDatePicker}
                                 className='form-control'
                                 value={this.state.currentDate}
-                                minDate={new Date()}
+                                minDate={yesterday}
                             />
                         </div>
                         <div className='col-12 pick-hour-container'>
@@ -203,7 +211,8 @@ class Doctor extends Component {
 const mapStateToProps = state => {
     return {
         allDoctors: state.admin.allDoctors,
-        allScheduleTime: state.admin.allScheduleTime
+        allScheduleTime: state.admin.allScheduleTime,
+
     };
 };
 
@@ -211,6 +220,7 @@ const mapDispatchToProps = dispatch => {
     return {
         fetchAllDoctorsStart: () => dispatch(actions.fetchAllDoctorsStart()),
         fetchAllScheduleTimeStart: () => dispatch(actions.fetchAllScheduleTimeStart()),
+
     };
 };
 

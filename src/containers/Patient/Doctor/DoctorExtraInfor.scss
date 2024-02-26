@@ -1,0 +1,34 @@
+.doctor-extra-infor-container {
+    padding: 0 15px;
+    border-left: 1px solid #ddd;
+
+    .content-up {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+
+        .title-up {
+            font-weight: 600;
+        }
+
+        .name-clinic {
+            font-weight: 600;
+        }
+    }
+
+    .content-down {
+        padding-top: 10px;
+
+        .show-hide {
+            color: rgba(72, 196, 211, 1.00);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .title-show {
+
+            .right {
+                float: right;
+            }
+        }
+    }
+}
