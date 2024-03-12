@@ -1,0 +1,32 @@
+.doctor-extra-infor-container {
+  padding: 0 15px;
+  border-left: 1px solid #ddd;
+}
+
+.doctor-extra-infor-container .content-up {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.doctor-extra-infor-container .content-up .title-up {
+  font-weight: 600;
+}
+
+.doctor-extra-infor-container .content-up .name-clinic {
+  font-weight: 600;
+}
+
+.doctor-extra-infor-container .content-down {
+  padding-top: 10px;
+}
+
+.doctor-extra-infor-container .content-down .show-hide {
+  color: #48c4d3;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.doctor-extra-infor-container .content-down .title-show .right {
+  float: right;
+}
+/*# sourceMappingURL=DoctorExtraInfor.css.map */

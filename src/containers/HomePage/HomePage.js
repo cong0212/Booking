@@ -5,6 +5,8 @@ import Specialty from './section/Specialty'
 import ListServices from './section/ListServices';
 import Facility from './section/Facility';
 import Doctors from './section/Doctors';
+import About from './section/About';
+import HomeFooter from './HomeFooter';
 
 
 
@@ -20,6 +22,8 @@ class HomePage extends Component {
                 <Specialty />
                 <Facility />
                 <Doctors />
+                <About/>
+                <HomeFooter/>
 
             </div>
 

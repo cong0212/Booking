@@ -1,0 +1,68 @@
+@charset "UTF-8";
+.doctor-schedule-container {
+  border-right: 1px solid #ddd;
+  min-height: 150px;
+}
+
+.doctor-schedule-container .all-schedule select {
+  border-bottom: 1px solid #ddd;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  cursor: pointer;
+  color: #337ab7;
+  font-weight: 600;
+}
+
+.doctor-schedule-container .all-schedule select option {
+  cursor: pointer;
+}
+
+.doctor-schedule-container .all-time .text-calendar {
+  margin: 10px 10px;
+}
+
+.doctor-schedule-container .all-time .text-calendar i {
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+.doctor-schedule-container .all-time .text-calendar span {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.doctor-schedule-container .all-time .time-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.doctor-schedule-container .all-time .time-content button {
+  padding: 8px 20px;
+  border: 2px solid #ddd;
+  outline: none;
+  background-color: transparent;
+  min-width: 170px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #333;
+  /* Màu chữ */
+}
+
+.doctor-schedule-container .all-time .time-content button:hover {
+  background-color: #f0f0f0;
+  /* Màu nền khi hover */
+  border-color: #337ab7;
+  /* Đổi màu viền khi hover */
+  color: #337ab7;
+  /* Đổi màu chữ khi hover */
+}
+/*# sourceMappingURL=DoctorSchedule.css.map */

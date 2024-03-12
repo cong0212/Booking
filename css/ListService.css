@@ -1,0 +1,86 @@
+@charset "UTF-8";
+.list-service-container {
+  height: 700px;
+  width: 1208px;
+  margin-top: 80px !important;
+  margin: 0 auto;
+}
+
+.list-service-container .list-service-header {
+  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.list-service-container .list-sevice-body {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  /* Canh chỉnh theo chiều dọc */
+}
+
+.list-service-container .list-sevice-body .service-item {
+  width: 48%;
+  /* Đảm bảo các mục không tràn ra khỏi cột */
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  height: 100px;
+  border: 1px solid #f1f1f1;
+  border-radius: 16px;
+  background: url("../../../assets/images/specialty/ic_background_grid_item.b108f491.png");
+  cursor: pointer;
+}
+
+.list-service-container .list-sevice-body .service-item .service-item-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  border-radius: 500px;
+  width: 80px;
+  height: 80px;
+  margin-right: 110px;
+  margin-left: 20px;
+  background: radial-gradient(circle, #ffd354, #ffefc3, #fefdfb, white);
+}
+
+.list-service-container .list-sevice-body .service-item .service-item-icon img {
+  /* Sắp xếp hình ảnh lên đầu */
+  width: 60px;
+  height: 60px;
+}
+
+.list-service-container .list-sevice-body .service-item .service-item-center {
+  font-size: 20px;
+  font-weight: 600;
+  /* Các thuộc tính CSS cần thiết để căn giữa văn bản */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=ListService.css.map */

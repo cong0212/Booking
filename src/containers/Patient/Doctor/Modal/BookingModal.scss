@@ -1,0 +1,102 @@
+.booking-modal-container {
+    
+    .booking-modal-content {
+        .booking-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+
+            .left {
+                flex: 1;
+            }
+
+            .right {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #ddd;
+                transition: background-color 0.3s ease; // Add transition for hover effect
+
+                &:hover {
+                    background-color: #c4c4c4;
+                }
+            }
+        }
+
+        .booking-modal-body {
+            padding: 20px;
+
+            .doctor-infor {
+                // Định dạng thông tin về bác sĩ nếu cần
+            }
+
+            .price {
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+
+                .col-6 {
+                    width: 50%;
+                    padding: 0 10px;
+                    margin-bottom: 15px;
+                }
+
+                .form-group {
+                    margin-bottom: 15px;
+
+                    label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    input {
+                        width: 100%;
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .booking-modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+
+            .btn-booking-confirm,
+            .btn-booking-cancel {
+                padding: 8px 16px;
+                margin-left: 10px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                border-radius: 4px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .btn-booking-confirm {
+                background-color: #007bff;
+                color: #fff;
+            }
+
+            .btn-booking-cancel {
+                background-color: #dc3545;
+                color: #fff;
+            }
+        }
+    }
+}

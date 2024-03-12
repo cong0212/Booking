@@ -1,0 +1,160 @@
+@charset "UTF-8";
+.section-doctors {
+  padding-top: 20px;
+  height: 500px;
+  background: url("../../../assets/images/Doctors/140311-background5.png");
+}
+
+.section-doctors .specialty-content {
+  width: 1208px;
+  margin: 0 auto;
+}
+
+.section-doctors .specialty-content .specialty-content-header {
+  margin: 32px 0;
+  margin-right: 19px;
+}
+
+.section-doctors .specialty-content .specialty-content-header .title-section {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.section-doctors .specialty-content .specialty-content-header .btn-section {
+  float: right;
+  outline: none;
+  background-color: #daf3f6;
+  color: #34929e;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.section-doctors .specialty-content .specialty-content-header .btn-section:hover {
+  background-color: #bce9ee;
+  color: #34929e;
+}
+
+.section-doctors .specialty-content .img-customize {
+  height: 350px;
+  border-color: #f1f1f1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.section-doctors .specialty-content .img-customize .img {
+  height: 230px;
+  width: 230px;
+  background-size: contain;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.section-doctors .specialty-content .img-customize .title-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 20px;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.slick-prev {
+  -webkit-box-shadow: #c9ecf0 2px 2px 5px;
+          box-shadow: #c9ecf0 2px 2px 5px;
+  width: 40px;
+  /* Adjust the width as needed */
+  height: 40px;
+  /* Adjust the height as needed */
+  background-color: #c4eaf3 !important;
+  border-radius: 8px !important;
+  border-width: 1px !important;
+  border-color: #b5e7ed !important;
+  /* Add a border */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  z-index: 1000 !important;
+  cursor: pointer;
+  /* Transition effect for background color */
+}
+
+.slick-prev:hover {
+  background-color: #c4eaf3 !important;
+}
+
+.slick-next {
+  -webkit-box-shadow: #c9ecf0 2px 2px 5px;
+          box-shadow: #c9ecf0 2px 2px 5px;
+  width: 40px;
+  /* Adjust the width as needed */
+  height: 40px;
+  /* Adjust the height as needed */
+  border-radius: 8px !important;
+  border-width: 1px !important;
+  border-color: #b5e7ed !important;
+  background-color: #c4eaf3 !important;
+  /* Add a border */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  z-index: 1000 !important;
+  cursor: pointer;
+  /* Transition effect for background color */
+}
+
+.slick-next:hover {
+  background-color: #c4eaf3 !important;
+}
+
+.slick-disabled {
+  display: none !important;
+}
+
+.slick-slide {
+  padding-right: 20px;
+  /* Tạo khoảng cách giữa các slide */
+}
+
+.slick-prev {
+  left: -19px;
+  /* Position the prev button */
+}
+
+.slick-next {
+  right: 1px;
+  /* Position the next button */
+}
+
+/* Style the icon inside the arrows */
+/*# sourceMappingURL=Doctors.css.map */

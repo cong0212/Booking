@@ -1,0 +1,153 @@
+@charset "UTF-8";
+.section-specialty {
+  height: 500px;
+}
+
+.section-specialty .specialty-content {
+  width: 1208px;
+  margin: 0 auto;
+}
+
+.section-specialty .specialty-content .specialty-content-header {
+  margin: 32px 0;
+  margin-right: 19px;
+}
+
+.section-specialty .specialty-content .specialty-content-header .title-section {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.section-specialty .specialty-content .specialty-content-header .btn-section {
+  float: right;
+  outline: none;
+  background-color: #daf3f6;
+  color: #34929e;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.section-specialty .specialty-content .specialty-content-header .btn-section:hover {
+  background-color: #bce9ee;
+  color: #34929e;
+}
+
+.section-specialty .specialty-content .img-customize {
+  height: 300px;
+  border-color: #f1f1f1;
+  border-radius: 16px;
+  border: 1px solid #f1f1f1;
+  overflow: hidden;
+}
+
+.section-specialty .specialty-content .img-customize .img {
+  height: 80%;
+  width: 100%;
+  background: url(../../../assets/images/specialty/101627-co-xuong-khop.png);
+  background-size: contain;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-specialty .specialty-content .img-customize .title-img {
+  height: 20%;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slick-prev {
+  -webkit-box-shadow: #c9ecf0 2px 2px 5px;
+          box-shadow: #c9ecf0 2px 2px 5px;
+  width: 40px;
+  /* Adjust the width as needed */
+  height: 40px;
+  /* Adjust the height as needed */
+  background-color: #c4eaf3 !important;
+  border-radius: 8px !important;
+  border-width: 1px !important;
+  border-color: #b5e7ed !important;
+  /* Add a border */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  z-index: 1000 !important;
+  cursor: pointer;
+  /* Transition effect for background color */
+}
+
+.slick-prev:hover {
+  background-color: #c4eaf3 !important;
+}
+
+.slick-next {
+  -webkit-box-shadow: #c9ecf0 2px 2px 5px;
+          box-shadow: #c9ecf0 2px 2px 5px;
+  width: 40px;
+  /* Adjust the width as needed */
+  height: 40px;
+  /* Adjust the height as needed */
+  border-radius: 8px !important;
+  border-width: 1px !important;
+  border-color: #b5e7ed !important;
+  background-color: #c4eaf3 !important;
+  /* Add a border */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  z-index: 1000 !important;
+  cursor: pointer;
+  /* Transition effect for background color */
+}
+
+.slick-next:hover {
+  background-color: #c4eaf3 !important;
+}
+
+.slick-slide {
+  padding-right: 20px;
+  /* Tạo khoảng cách giữa các slide */
+}
+
+.slick-prev {
+  left: -19px;
+  /* Position the prev button */
+}
+
+.slick-next {
+  right: 1px;
+  /* Position the next button */
+}
+
+/* Style the icon inside the arrows */
+/*# sourceMappingURL=Specialty.css.map */

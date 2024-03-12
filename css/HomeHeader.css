@@ -1,0 +1,181 @@
+@charset "UTF-8";
+.home-header-container {
+  height: 70px;
+  width: 100%;
+  background-color: #edfffa;
+  padding-top: 20px;
+}
+
+.home-header-container .home-header-content {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  padding: 0 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home-header-container .home-header-content .left-content {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Căn giữa theo chiều dọc */
+}
+
+.home-header-container .home-header-content .left-content .Header-logo {
+  height: 60px;
+  /* Chiều cao bạn muốn */
+  width: 170px;
+  /* Tự điều chỉnh chiều rộng theo tỷ lệ */
+  background: url(../../assets/images/bookingcare-logo-v3.png) center center no-repeat;
+  background-size: contain;
+  /* Hiển thị hình ảnh theo tỷ lệ */
+  margin: 0 0;
+  /* Căn giữa theo chiều ngang */
+  cursor: pointer;
+}
+
+.home-header-container .home-header-content .left-content i {
+  font-size: 30px;
+  color: grey;
+}
+
+.home-header-container .home-header-content .center-content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-header-container .home-header-content .center-content .ChildContent {
+  font-size: 20px;
+}
+
+.home-header-container .home-header-content .center-content .SearchInput {
+  position: relative;
+  display: inline-block;
+}
+
+.home-header-container .home-header-content .center-content .SearchInput .Input {
+  width: 200px;
+  /* Điều chỉnh độ rộng của input */
+  padding: 10px 30px 10px 10px;
+  /* Điều chỉnh padding để icon không che phủ text */
+  border-radius: 20px;
+  /* Tạo góc bo tròn */
+  border: 1px solid #ccc;
+  /* Điều chỉnh border cho ô input */
+  outline: none;
+  /* Loại bỏ viền khi focus */
+}
+
+.home-header-container .home-header-content .center-content .SearchInput .Input + i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #aaa;
+}
+
+.home-header-container .home-header-content .right-content {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-header-container .home-header-content .right-content .schedule,
+.home-header-container .home-header-content .right-content .Support {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 10px;
+}
+
+.home-header-container .home-header-content .right-content .schedule i,
+.home-header-container .home-header-content .right-content .Support i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #3f74dd;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.home-header-container .home-header-content .right-content .schedule span,
+.home-header-container .home-header-content .right-content .Support span {
+  font-size: 20px;
+  color: #3958e0;
+}
+
+.home-header-container .home-header-content .right-content .schedule:hover i,
+.home-header-container .home-header-content .right-content .Support:hover i {
+  color: #32b9e2;
+}
+
+.home-header-container .home-header-content .right-content .schedule:hover span,
+.home-header-container .home-header-content .right-content .Support:hover span {
+  color: #2e83e4;
+}
+
+.home-header-banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 30px;
+}
+
+.home-header-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-color: #edfffa;
+  z-index: -1;
+}
+
+.home-header-banner .home-header-banner-img {
+  width: 1208px;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-image: url("../../assets/images/163557-dat-lich-cham-soc-wecare247.png");
+  background-size: cover;
+  background-position: center;
+}
+/*# sourceMappingURL=HomeHeader.css.map */

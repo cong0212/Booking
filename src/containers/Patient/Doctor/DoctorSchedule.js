@@ -5,6 +5,7 @@ import './DoctorSchedule.scss';
 import moment from 'moment';
 import localization from 'moment/locale/vi';
 import { getScheduleDoctorByDate } from '../../../services/userService';
+import BookingModal from './Modal/BookingModal';
 
 
 
@@ -17,7 +18,9 @@ class DoctorSchedule extends Component {
         super(props)
         this.state = {
             allDays: [],
-            allAvalablelTime: []
+            allAvalablelTime: [],
+            isOpenModalBooking: false,
+            dataScheduleModal: {}
         }
     }
 
@@ -44,17 +47,17 @@ class DoctorSchedule extends Component {
     }
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
-        if(this.props.doctorIdFromParent !== prevProps.doctorIdFromParent) {
+        if (this.props.doctorIdFromParent !== prevProps.doctorIdFromParent) {
             let allDays = this.state.allDays
             let res = await getScheduleDoctorByDate(this.props.doctorIdFromParent, allDays[0].value);
             this.setState({
                 allAvalablelTime: res.response.data ? res.response.data : []
             })
 
-            console.log('check id, date: ', this.props.doctorIdFromParent, allDays[0].value )
+            console.log('check id, date: ', this.props.doctorIdFromParent, allDays[0].value)
             console.log(' check time: ', res)
 
-            
+
         }
     }
 
@@ -80,10 +83,23 @@ class DoctorSchedule extends Component {
 
     }
 
+    handleClickScheduleTime = (time) => {
+        this.setState({
+            isOpenModalBooking: true,
+            dataScheduleModal: time
+        })
+    }
+
+    closeBookingModal = () => {
+        this.setState({
+            isOpenModalBooking: false
+        })
+    }
+
     render() {
 
         console.log('check all day state: ', this.state)
-        let { allDays, allAvalablelTime } = this.state
+        let { allDays, allAvalablelTime, isOpenModalBooking, dataScheduleModal } = this.state
 
 
 
@@ -115,7 +131,9 @@ class DoctorSchedule extends Component {
                                     let timeDisplay = item.timeTypeData.valueEn;
 
                                     return (
-                                        <button key={index}>{timeDisplay}</button>
+                                        <button key={index}
+                                            onClick={() => this.handleClickScheduleTime(item)}
+                                        >{timeDisplay}</button>
                                     )
                                 })
                                 :
@@ -124,6 +142,11 @@ class DoctorSchedule extends Component {
                         </div>
                     </div>
                 </div>
+                <BookingModal
+                    isOpenModal={isOpenModalBooking}
+                    closeBookingModal = {this.closeBookingModal}
+                    dataTime = {dataScheduleModal}
+                />
             </>
 
         );

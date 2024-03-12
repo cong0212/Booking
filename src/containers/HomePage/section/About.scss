@@ -1,0 +1,26 @@
+.About-container {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center; // Canh giữa nội dung theo chiều ngang
+    align-items: center; // Canh giữa nội dung theo chiều dọc
+
+    .content-wrapper {
+        display: flex;
+        align-items: center; // Canh giữa nội dung theo chiều dọc
+    }
+
+    .video-container {
+        margin-right: 20px;
+    }
+
+    .text-container {
+        width: 30%; // Điều chỉnh kích thước của phần văn bản
+        padding-left: 100px;
+    }
+
+    iframe {
+        width: 600px;
+        height: 350px;
+        border-radius: 20px;
+    }
+}

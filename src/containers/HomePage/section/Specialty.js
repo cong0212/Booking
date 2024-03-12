@@ -5,12 +5,37 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Specialty.scss'
+import { getTopSpecialtyService } from '../../../services/userService';
+import * as actions from '../../../store/actions';
 
 
 
 class Specialty extends Component {
 
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            dataSpecialty: [],
+        }
+    }
+
+    async componentDidMount() {
+        let res = await getTopSpecialtyService("")
+        console.log('check data specialty: ', res)
+
+        this.setState({
+            dataSpecialty: res.response.data
+        })
+
+    }
+
     render() {
+
+        let { dataSpecialty } = this.state
+
+        console.log('check state specialty: ', dataSpecialty)
 
         const settings = {
             dots: true,
@@ -28,31 +53,23 @@ class Specialty extends Component {
                         <button className='btn-section'>Xem them</button>
                     </div>
                     <div>
-                        <Slider {...settings}>
-                            <div className='img-customize'>
-                                <div className='img'></div>
-                                <div className='title-img'>Cơ xương khớp</div>
-                            </div>
-                            <div className='img-customize'>
-                                <div className='img'></div>
-                                <div className='title-img'></div>
-                            </div>
-                            <div className='img-customize'>
-                                <div className='img'></div>
-                                <div className='title-img'></div>
-                            </div>
-                            <div className='img-customize'>
-                                <div className='img'></div>
-                                <div className='title-img'></div>
-                            </div>
-                            <div className='img-customize'>
-                                <div className='img'></div>
-                                <div className='title-img'></div>
-                            </div>
-                            <div className='img-customize'>
-                                <div className='img'></div>
-                                <div className='title-img'></div>
-                            </div>
+                    <Slider {...settings}>
+                            {dataSpecialty && dataSpecialty.length > 0
+                                && dataSpecialty.map((item, index) => {
+                                    let imageBase64 = '';
+                                    if (item.image) {
+                                        imageBase64 = new Buffer(item.image, 'base64').toString('binary');
+                                    }
+                                    return (
+                                        <div className='img-customize' key={index}>
+                                            <div className='img'
+                                                style={{ backgroundImage: `url(${imageBase64})` }}
+                                            ></div>
+                                            <div className='title-img'>{item.name}</div>
+                                        </div>
+                                    )
+                                })
+                            }
                         </Slider>
                     </div>
                 </div>

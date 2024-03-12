@@ -1,0 +1,139 @@
+@charset "UTF-8";
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.btn-edit {
+  width: 50px;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: orange;
+}
+
+.btn-edit:hover {
+  background-color: transparent !important;
+  color: orange !important;
+}
+
+.btn-delete {
+  width: 50px;
+  color: #ff0015;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.btn-delete:hover {
+  background-color: transparent !important;
+  color: #ff0015 !important;
+}
+
+.Modal-user-container {
+  /* SCSS cho form trong modal */
+}
+
+.Modal-user-container .modal-content .modal-header button {
+  background-color: transparent !important;
+  color: white;
+  border: none;
+  font-size: 28px;
+}
+
+.Modal-user-container .container-modal-user {
+  padding: 20px;
+}
+
+.Modal-user-container .container-modal-user .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Modal-user-container .container-modal-user .form-container label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.Modal-user-container .container-modal-user .form-container input[type="email"],
+.Modal-user-container .container-modal-user .form-container input[type="password"],
+.Modal-user-container .container-modal-user .form-container input[type="text"],
+.Modal-user-container .container-modal-user .form-container select {
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.Modal-user-container .container-modal-user .form-container input[type="email"]:focus,
+.Modal-user-container .container-modal-user .form-container input[type="password"]:focus,
+.Modal-user-container .container-modal-user .form-container input[type="text"]:focus,
+.Modal-user-container .container-modal-user .form-container select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  /* Màu khi focus */
+}
+
+.Modal-user-container .container-modal-user .form-container select {
+  width: 100%;
+}
+
+.Modal-user-container .container-modal-user .form-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.Modal-user-container .container-modal-user .form-container button:hover {
+  opacity: 0.8;
+  /* Độ mờ khi hover */
+}
+
+.Modal-user-container .container-modal-user .form-container button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.Modal-user-container .container-modal-user .form-container button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.Modal-user-container .container-modal-user .form-container button.cancel {
+  background-color: #f44336;
+}
+
+.Modal-user-container .container-modal-user .form-container button.cancel:hover {
+  background-color: #da190b;
+}
+/*# sourceMappingURL=UserManage.css.map */

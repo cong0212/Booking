@@ -44,7 +44,7 @@ export const adminMenu = [
     { //chuyên khoa
         name: 'menu.admin.specialty', menus: [
             {
-                name: 'menu.admin.manage-specialty', link: '/doctor/manage-schedule'
+                name: 'menu.admin.manage-specialty', link: '/system/manage-specialty'
 
             },
 
@@ -59,6 +59,10 @@ export const doctorMenu = [
         name: 'menu.doctor.manage-schedule', menus: [
             {
                 name: 'menu.doctor.manage-schedule', link: '/doctor/manage-schedule'
+
+            },
+            {
+                name: 'menu.doctor.manage-patient', link: '/doctor/manage-patient'
 
             },
         ]
