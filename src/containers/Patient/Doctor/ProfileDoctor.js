@@ -4,7 +4,8 @@ import './ProfileDoctor.scss';
 import { getProfileDoctorById } from '../../../services/userService';
 import NumberFormat from 'react-number-format';
 import _ from 'lodash';
-import moment from 'moment'
+import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 
 
@@ -26,6 +27,16 @@ class ProfileDoctor extends Component {
         this.setState({
             dataProfile: data
         })
+    }
+
+    async componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.doctorId !== prevProps.doctorId) {
+            let data = await this.getInforDoctor(this.props.doctorId)
+            this.setState({
+                dataProfile: data
+            })
+        }
+
     }
 
     getInforDoctor = async (id) => {
@@ -59,7 +70,7 @@ class ProfileDoctor extends Component {
     render() {
 
         let { dataProfile } = this.state
-        let { isShowDescriptionDoctor, dataTime } = this.props
+        let { isShowDescriptionDoctor, dataTime, isShowLinkDetail, doctorId, isShowPrice } = this.props
         let name = '';
         if (dataProfile && dataProfile.positionData) {
             name = `${dataProfile.positionData.valueEN}, ${dataProfile.firstName} ${dataProfile.lastName}`;
@@ -102,18 +113,28 @@ class ProfileDoctor extends Component {
 
 
                 </div>
+                {isShowLinkDetail === true &&
+                    <div className='view-detail-doctor'>
+                        <Link to={`/detail-doctor/${doctorId}`}>Xem thêm</Link>
+                    </div>
+                }
 
-                <div className='price'>GIÁ KHÁM:
-                    {dataProfile && dataProfile.DoctorInfor && dataProfile.DoctorInfor.priceTypeData
-                        &&
-                        <NumberFormat
-                            value={dataProfile.DoctorInfor.priceTypeData.valueEN}
-                            displayType={'text'}
-                            thousandSeparator={true}
-                            suffix={'$'}
-                        />
-                    }
-                </div>
+                {isShowPrice === true &&
+                    <div className='price'>GIÁ KHÁM:
+                        {dataProfile && dataProfile.DoctorInfor && dataProfile.DoctorInfor.priceTypeData
+                            &&
+                            <NumberFormat
+                                value={dataProfile.DoctorInfor.priceTypeData.valueEN}
+                                displayType={'text'}
+                                thousandSeparator={true}
+                                suffix={'$'}
+                            />
+                        }
+                    </div>
+
+                }
+
+
             </div>
         );
 

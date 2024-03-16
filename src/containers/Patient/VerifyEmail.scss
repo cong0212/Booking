@@ -1,0 +1,25 @@
+.verify-email-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Chiếm toàn bộ chiều cao của màn hình */
+    background-color: #f8f8f8;
+    /* Màu nền của container */
+
+    .infor-booking {
+        font-size: 24px;
+        color: red;
+        font-weight: 600;
+        /* Màu chữ đỏ */
+        text-align: center;
+        padding: 20px;
+        /* Khoảng cách đệm xung quanh nội dung */
+        background-color: #fff;
+        /* Màu nền của phần thông tin */
+        border-radius: 8px;
+        /* Bo góc cho phần thông tin */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* Đổ bóng cho phần thông tin */
+    }
+}

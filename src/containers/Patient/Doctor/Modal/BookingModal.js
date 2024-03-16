@@ -126,6 +126,7 @@ class BookingModal extends Component {
             isShowLoading: true,
         })
 
+
         let res = await postPatientBookAppointment({
             fullName: this.state.fullName,
             phoneNumber: this.state.phoneNumber,
@@ -160,7 +161,7 @@ class BookingModal extends Component {
         console.log('checl data time: ', this.props.dataTime)
         console.log('check state: ', this.state)
 
-        let { isOpenModal, closeBookingModal, dataTime } = this.props;
+        let { isOpenModal, closeBookingModal, dataTime, isShowPrice } = this.props;
         let doctorId = '';
         if (dataTime && !_.isEmpty(dataTime)) {
             doctorId = dataTime.doctorID
@@ -194,6 +195,7 @@ class BookingModal extends Component {
                                     doctorId={doctorId}
                                     isShowDescriptionDoctor={false}
                                     dataTime={dataTime}
+                                    isShowPrice={true}
                                 />
                             </div>
 

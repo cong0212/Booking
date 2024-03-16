@@ -27,6 +27,21 @@ class DoctorSchedule extends Component {
     async componentDidMount() {
         console.log('moment vie: ', moment(new Date()).format('dddd - DD/MM'));
         console.log('moment en: ', moment(new Date()).locale('en').format('ddd - DD/MM'))
+        let allDays = [];
+        for (let i = 0; i < 7; i++) {
+            let object = {};
+            object.label = moment(new Date()).add(i, 'days').locale('en').format('ddd - DD/MM')
+            object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
+            allDays.push(object)
+        }
+        this.setState({
+            allDays: allDays,
+        })
+
+        let res = await getScheduleDoctorByDate(this.props.doctorIdFromParent, allDays[0].value);
+        this.setState({
+            allAvalablelTime: res.response.data ? res.response.data : []
+        })
         this.setArrDays();
     }
 
@@ -144,8 +159,8 @@ class DoctorSchedule extends Component {
                 </div>
                 <BookingModal
                     isOpenModal={isOpenModalBooking}
-                    closeBookingModal = {this.closeBookingModal}
-                    dataTime = {dataScheduleModal}
+                    closeBookingModal={this.closeBookingModal}
+                    dataTime={dataScheduleModal}
                 />
             </>
 

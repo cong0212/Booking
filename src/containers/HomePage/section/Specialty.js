@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './Specialty.scss'
 import { getTopSpecialtyService } from '../../../services/userService';
 import * as actions from '../../../store/actions';
+import { withRouter } from 'react-router'
 
 
 
@@ -29,6 +30,11 @@ class Specialty extends Component {
             dataSpecialty: res.response.data
         })
 
+    }
+    handleViewDetailSpecialty = (item) => {
+        if (this.props.history) {
+            this.props.history.push(`/detail-specialty/${item.id}`)
+        }
     }
 
     render() {
@@ -53,7 +59,7 @@ class Specialty extends Component {
                         <button className='btn-section'>Xem them</button>
                     </div>
                     <div>
-                    <Slider {...settings}>
+                        <Slider {...settings}>
                             {dataSpecialty && dataSpecialty.length > 0
                                 && dataSpecialty.map((item, index) => {
                                     let imageBase64 = '';
@@ -61,7 +67,7 @@ class Specialty extends Component {
                                         imageBase64 = new Buffer(item.image, 'base64').toString('binary');
                                     }
                                     return (
-                                        <div className='img-customize' key={index}>
+                                        <div className='img-customize' key={index} onClick={() => this.handleViewDetailSpecialty(item)}>
                                             <div className='img'
                                                 style={{ backgroundImage: `url(${imageBase64})` }}
                                             ></div>
@@ -91,4 +97,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Specialty));

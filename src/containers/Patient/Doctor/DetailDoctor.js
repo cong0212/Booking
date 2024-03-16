@@ -5,6 +5,7 @@ import './DetailDoctor.scss';
 import { getDetailInforDoctor } from '../../../services/userService';
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfor from './DoctorExtraInfor';
+import HomeFooter from '../../HomePage/HomeFooter';
 
 
 
@@ -95,6 +96,8 @@ class DetailDoctor extends Component {
                 </div>
 
                 <div className='comment-doctor'></div>
+                
+                <HomeFooter/>
 
             </>
 

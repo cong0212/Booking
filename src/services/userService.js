@@ -84,6 +84,10 @@ const getTopSpecialtyService = (limit) => {
     return axios.get(`/api/get-top-specialty?limit=${limit}`)
 }
 
+const getDetailSpecialtyById = (data) => {
+    return axios.get(`/api/get-detail-specialty-by-id?id=${data.id}&location=${data.location}`)
+}
+
 export {
     handleLoginApi, getAllUsers,
     CreateNewUsersService, DeleteNewUsersService,
@@ -91,6 +95,7 @@ export {
     saveDetailDoctor, getDetailInforDoctor, saveBulkScheduleDoctor,
     getTopDoctorService, getScheduleDoctorByDate, getExtraDoctorById,
     getProfileDoctorById, postPatientBookAppointment, postVerifyBookAppointment,
-    createNewSpecialty, getPatientForDoctor, postSendRemedy,getTopSpecialtyService
+    createNewSpecialty, getPatientForDoctor, postSendRemedy, getTopSpecialtyService,
+    getDetailSpecialtyById
 }
 

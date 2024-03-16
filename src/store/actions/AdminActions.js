@@ -1,5 +1,5 @@
 import actionTypes from './actionTypes';
-import { getAllCodeService, CreateNewUsersService, getAllUsers, DeleteNewUsersService, EditUsersService, getAllDoctorService, saveDetailDoctor, getTopDoctorService } from '../../services/userService';
+import { getAllCodeService, CreateNewUsersService, getAllUsers, DeleteNewUsersService, EditUsersService, getAllDoctorService, saveDetailDoctor, getTopDoctorService, getTopSpecialtyService } from '../../services/userService';
 import { dispatch } from '../../redux';
 import { toast } from 'react-toastify';
 // export const fetchGenderStart = () => ({
@@ -262,6 +262,7 @@ export const saveDetailDoctorsStart = (data) => {
                 toast.success("Save detail doctor success!")
                 dispatch(saveDetailDoctorsSuccess())
             } else {
+                toast.error("Missing parameter!")
                 dispatch(saveDetailDoctorsFailed());
             }
         } catch (e) {
@@ -312,16 +313,18 @@ export const fetchRequiredDoctorInfor = () => {
             dispatch({ type: actionTypes.FETCH_REQUIRED_DOCTORLL_INFOR_START })
             let resPrice = await getAllCodeService("PRICE");
             let resPayment = await getAllCodeService("PAYMENT");
-            let resProvince = await getAllCodeService("PROVINCE")
+            let resProvince = await getAllCodeService("PROVINCE");
+            let resSpecialty = await getTopSpecialtyService('')
             if (resPrice && resPrice.errCode === 0
                 && resPayment && resPayment.errCode === 0
                 && resProvince && resProvince.errCode === 0
+                && resSpecialty && resSpecialty.response && resSpecialty.response.errCode === 0
             ) {
-
                 let data = {
                     resPrice: resPrice.data,
                     resPayment: resPayment.data,
                     resProvince: resProvince.data,
+                    resSpecialty: resSpecialty.response.data
                 }
                 dispatch(fetchRequiredDoctorInforSuccess(data))
             } else {
