@@ -1,0 +1,91 @@
+.table-schedule-detail {
+
+    margin-top: 20px;
+
+    #customers {
+        width: 100%;
+        border-collapse: collapse; // Xóa bỏ khoảng cách giữa các border
+        table-layout: auto; // Cho phép bảng tự động điều chỉnh kích thước cột
+
+        th,
+        td {
+            padding: 8px; // Khoảng cách padding cho th và td
+            border: 1px solid #ddd; // Màu viền cho th và td
+            text-align: left; // Căn chỉnh text ở trái
+
+            &:not(:last-child) {
+                border-right: 0; // Xóa viền phải của th và td trừ phần tử cuối cùng
+            }
+        }
+
+
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; // Màu nền cho các hàng chẵn
+        }
+
+        .time-slots {
+            display: flex; // Sử dụng flexbox cho các khung giờ
+            flex-wrap: wrap; // Cho phép các khung giờ chuyển xuống hàng mới nếu không đủ chỗ
+            gap: 8px; // Khoảng cách giữa các khung giờ
+
+            span {
+                padding: 5px 10px; // Khoảng cách padding cho mỗi khung giờ
+                background-color: #e7e7e7; // Màu nền cho khung giờ
+                border-radius: 4px; // Bán kính border, tạo hiệu ứng bo góc
+                font-size: 14px; // Kích thước font chữ
+                cursor: pointer; // Biểu tượng con trỏ khi hover vào
+
+                &:hover {
+                    background-color: #d6d6d6; // Màu nền khi hover
+                }
+            }
+        }
+    }
+}
+
+
+.container {
+    display: flex;
+}
+
+.circle {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    margin-right: 10px;
+    /* Khoảng cách giữa các vòng tròn */
+}
+
+
+.green {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: green;
+    /* Màu xanh */
+}
+
+.red {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    /* Màu đỏ */
+}
+
+.yellow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: yellow;
+    /* Màu vàng */
+}
+
+.text {
+    width: 100px;
+    padding: auto;
+    margin-left: 10px;
+    /* Khoảng cách giữa vòng tròn và văn bản */
+}

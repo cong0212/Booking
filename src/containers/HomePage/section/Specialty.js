@@ -35,6 +35,8 @@ class Specialty extends Component {
         if (this.props.history) {
             this.props.history.push(`/detail-specialty/${item.id}`)
         }
+
+        console.log('HELLO check item: ', item)
     }
 
     render() {

@@ -119,6 +119,8 @@ class DetailSpecialty extends Component {
         let { arrDoctorId, listProvince, dataDetailSpecialty } = this.state
         console.log(' ALO check state detail specialty: ', this.state)
 
+
+
         return (
             <>
                 <div className='detail-specialty-container'>
@@ -151,6 +153,8 @@ class DetailSpecialty extends Component {
 
                             {arrDoctorId && arrDoctorId.length > 0 &&
                                 arrDoctorId.map((item, index) => {
+                                    let currentDate = new Date(); // Lấy thời gian hiện tại
+                                    let formatedDate = currentDate.getTime(); // Chuyển đổi thành số thời gian Unix
                                     return (
                                         <div className='each-doctor' key={index}>
                                             <div className='dt-content-left'>
@@ -176,7 +180,7 @@ class DetailSpecialty extends Component {
                                                         doctorIdFromParent={item}
                                                     />
                                                 </div>
-                                               
+
                                             </div>
 
                                         </div>

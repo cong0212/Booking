@@ -7,6 +7,7 @@ import RegisterPackageGroupOrAcc from '../containers/System/RegisterPackageGroup
 import Header from '../containers/Header/Header'
 import ManageDoctor from '../containers/System/Admin/ManageDoctor';
 import ManageSpecialty from '../containers/System/Specialty/ManageSpecialty';
+import ManageDetailSchedule from '../containers/System/Admin/ManageDetailSchedule';
 
 
 
@@ -27,6 +28,7 @@ class System extends Component {
                             <Route path="/system/user-redux" component={UserRedux} />
                             <Route path="/system/manage-doctor" component={ManageDoctor} />
                             <Route path="/system/manage-specialty" component={ManageSpecialty} />
+                            <Route path="/system/manage-detail-schedule" component={ManageDetailSchedule} />
                             <Route path="/system/register-package-group-or-account" component={RegisterPackageGroupOrAcc} />
                             <Route component={() => { return (<Redirect to={systemMenuPath} />) }} />
                         </Switch>

@@ -42,7 +42,8 @@
             "clinic": "Phòng khám",
             "manage-clinic": "Quản lí phòng khám",
             "specialty": "Chuyên khoa",
-            "manage-specialty": "Quản lí chuyên khoa"
+            "manage-specialty": "Quản lí chuyên khoa",
+            "manage-detail-schedule": "Chi tiết lịch khám"
         },
 
         "doctor": {

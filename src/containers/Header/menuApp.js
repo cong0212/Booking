@@ -28,6 +28,12 @@ export const adminMenu = [
                 name: 'menu.doctor.manage-schedule', link: '/doctor/manage-schedule'
 
             },
+
+            { //quan li ke hoach bac si
+
+                name: 'menu.admin.manage-detail-schedule', link: '/system/manage-detail-schedule'
+
+            },
         ]
     },
 

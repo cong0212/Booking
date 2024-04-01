@@ -69,7 +69,7 @@ class DoctorSchedule extends Component {
                 allAvalablelTime: res.response.data ? res.response.data : []
             })
 
-            console.log('check id, date: ', this.props.doctorIdFromParent, allDays[0].value)
+            console.log('FUCK check id, date: ', this.props.doctorIdFromParent, allDays[0].value)
             console.log(' check time: ', res)
 
 
@@ -81,7 +81,7 @@ class DoctorSchedule extends Component {
             let doctorId = this.props.doctorIdFromParent;
             let date = event.target.value
             let res = await getScheduleDoctorByDate(doctorId, date)
-            console.log('check res schdule : ', res)
+            console.log('ALOOO  check res schdule : ', res)
 
             if (res.response && res.response.errCode === 0) {
                 this.setState({
@@ -99,10 +99,25 @@ class DoctorSchedule extends Component {
     }
 
     handleClickScheduleTime = (time) => {
-        this.setState({
-            isOpenModalBooking: true,
-            dataScheduleModal: time
-        })
+        if (time.bookingData.timeType !== time.timeType) {
+            this.setState({
+                isOpenModalBooking: true,
+                dataScheduleModal: time
+            })
+        }
+
+        time.bookingData.forEach((bookingItem) => {
+            if (bookingItem.timeType === time.timeType && bookingItem.date === time.date) {
+                alert('lich nay da duoc dat')
+
+                this.setState({
+                    isOpenModalBooking: false,
+                })
+            }
+        });
+
+        
+
     }
 
     closeBookingModal = () => {
@@ -113,9 +128,11 @@ class DoctorSchedule extends Component {
 
     render() {
 
+
         console.log('check all day state: ', this.state)
         let { allDays, allAvalablelTime, isOpenModalBooking, dataScheduleModal } = this.state
 
+        let statusID = ''
 
 
         return (
@@ -144,9 +161,28 @@ class DoctorSchedule extends Component {
                             {allAvalablelTime && allAvalablelTime.length > 0 ?
                                 allAvalablelTime.map((item, index) => {
                                     let timeDisplay = item.timeTypeData.valueEn;
+                                    let buttonClass = '';
+
+                                    // Duyệt qua mỗi phần tử trong mảng bookingData
+                                    item.bookingData.forEach((bookingItem) => {
+                                        if (bookingItem.timeType === item.timeType && bookingItem.date === item.date) {
+                                            switch (bookingItem.statusID) {
+                                                case 'S3':
+                                                    buttonClass = 'yellow';
+                                                    break;
+                                                case 'S2':
+                                                    buttonClass = 'yellow';
+                                                    break;
+                                               
+                                                default:
+                                                    buttonClass = '';
+                                            }
+                                        }
+                                    });
 
                                     return (
                                         <button key={index}
+                                            className={buttonClass}
                                             onClick={() => this.handleClickScheduleTime(item)}
                                         >{timeDisplay}</button>
                                     )
@@ -154,7 +190,9 @@ class DoctorSchedule extends Component {
                                 :
                                 <div>not examination schedule</div>
                             }
+
                         </div>
+
                     </div>
                 </div>
                 <BookingModal
